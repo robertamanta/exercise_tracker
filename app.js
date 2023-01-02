@@ -6,27 +6,27 @@ const port = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+mongoose.connect(process.env.URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
-mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true });
+const userRoute = require("./routes/user");
+app.use('/api/users',userRoute);
 
+const exerciseRoute = require("./routes/exercise");
+app.use('/api/users',exerciseRoute);
 
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
-
-app.post("/api/users",(req,res)=>
-{
-   let username = req.body.username;
-
-})
 
 
 
