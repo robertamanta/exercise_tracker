@@ -1,7 +1,7 @@
 # Exercise tracker
 
 
-[![Run on Repl.it](https://replit.com/badge/github/robertamanta/exercise_tracker)](https://exercise_tracker.robertamanta.repl.co)
+[![Run on Repl.it](https://replit.com/badge/github/robertamanta/exercisetracker)](https://exercisetracker.robertamanta.repl.co)
 
 
 This project is a part of Back End Development and APIs certification on freeCodeCamp.
